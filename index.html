@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -8,28 +8,36 @@
 
 <meta name="description" content="RideLink driver profile for Victor Express Cabs. Book rides and contact the driver directly on WhatsApp.">
 
-<link rel="icon" href="images/logo.png">
+<link rel="icon" type="image/png" href="images/logo.png">
 
 <style>
-/* =========================================================
-   RIDELINK DRIVER PROFILE TEMPLATE
-   ========================================================= */
 
+/* =========================================================
+   RIDELINK DRIVER PROFILE
+   ========================================================= */
 
 :root {
     --primary: #0b5cff;
     --primary-dark: #0847c7;
     --accent: #16a34a;
+
     --dark: #111827;
     --text: #374151;
     --muted: #6b7280;
-    --light: #f5f7fb;
+
+    --light: #eef4ff;
     --white: #ffffff;
-    --border: #e5e7eb;
-    --shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+    --blue-soft: #eaf2ff;
+    --green-soft: #ecfdf5;
+
+    --border: #dfe6f1;
+
+    --shadow: 0 10px 30px rgba(17, 24, 39, 0.08);
+    --shadow-hover: 0 14px 35px rgba(17, 24, 39, 0.12);
+
     --radius: 18px;
 }
-
 
 * {
     box-sizing: border-box;
@@ -37,25 +45,22 @@
     padding: 0;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
 
-
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: var(--light);
+    background:
+        radial-gradient(circle at top left, #f7fbff 0%, #eef4ff 38%, #f5f7fb 100%);
     color: var(--text);
     line-height: 1.6;
 }
-
 
 a {
     text-decoration: none;
     color: inherit;
 }
-
 
 img {
     max-width: 100%;
@@ -67,16 +72,14 @@ img {
    HEADER
    ========================================================= */
 
-
 .header {
-    background: rgba(255,255,255,0.96);
+    background: rgba(255,255,255,0.94);
     border-bottom: 1px solid var(--border);
     position: sticky;
     top: 0;
     z-index: 1000;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
 }
-
 
 .header-inner {
     max-width: 1050px;
@@ -87,6 +90,10 @@ img {
     justify-content: space-between;
 }
 
+.logo-area {
+    display: flex;
+    flex-direction: column;
+}
 
 .logo {
     font-size: 23px;
@@ -95,18 +102,21 @@ img {
     letter-spacing: -0.5px;
 }
 
-
 .logo span {
     color: var(--dark);
 }
 
+.logo-sub {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 2px;
+}
 
 .header-actions {
     display: flex;
     align-items: center;
     gap: 9px;
 }
-
 
 .small-btn {
     padding: 8px 13px;
@@ -116,107 +126,12 @@ img {
     border: 1px solid var(--border);
     background: white;
     cursor: pointer;
+    transition: 0.2s ease;
 }
 
 .small-btn:hover {
-    background: #f3f4f6;
-}
-
-
- .logo-area{
-    display:flex;
-    flex-direction:column;
-}
-
-.logo-sub{
-    font-size:11px;
-    color:var(--muted);
-    margin-top:2px;
-}
-
-.ridelink-badge{
-    display:inline-block;
-    background:#ecfdf5;
-    color:#166534;
-    padding:8px 14px;
-    border-radius:999px;
-    font-size:13px;
-    font-weight:700;
-    margin-top:10px;
-}
-
-.driver-reference{
-    margin-top:10px;
-    font-size:13px;
-    color:var(--muted);
-    font-weight:700;
-}
-
-.ridelink-promo{
-    background:linear-gradient(
-        135deg,
-        #0b5cff,
-        #0847c7
-    );
-    color:white;
-    padding:30px;
-    border-radius:18px;
-    text-align:center;
-    box-shadow:var(--shadow);
-}
-
-.ridelink-promo h2{
-    margin-bottom:12px;
-}
-
-.ridelink-promo p{
-    max-width:700px;
-    margin:auto;
-    margin-bottom:20px;
-    opacity:0.95;
-}
-
-.promo-btn{
-    display:inline-block;
-    background:white;
-    color:#0b5cff;
-    padding:12px 20px;
-    border-radius:12px;
-    font-weight:800;
-}
-
-.footer{
-    background:#111827;
-    color:white;
-    text-align:center;
-    padding:50px 20px;
-}
-
-.footer-title{
-    font-size:28px;
-    margin-bottom:10px;
-}
-
-.footer p{
-    max-width:700px;
-    margin:auto;
-    margin-bottom:25px;
-    opacity:0.9;
-}
-
-.footer-btn{
-    display:inline-block;
-    background:#0b5cff;
-    color:white;
-    padding:14px 22px;
-    border-radius:12px;
-    font-weight:800;
-}
-
-.footer-small{
-    margin-top:25px;
-    font-size:13px;
-    opacity:0.7;
+    background: var(--blue-soft);
+    border-color: #bfd2f5;
 }
 
 
@@ -227,7 +142,7 @@ img {
 .container {
     max-width: 1050px;
     margin: auto;
-    padding: 22px 16px 60px;
+    padding: 24px 16px 60px;
 }
 
 
@@ -235,51 +150,87 @@ img {
    PROFILE HERO
    ========================================================= */
 
-
 .profile-card {
     background: var(--white);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     overflow: hidden;
+    border: 1px solid rgba(223,230,241,0.8);
 }
-
 
 .hero-cover {
-    height: 145px;
+    height: 155px;
+
     background:
-        linear-gradient(135deg, rgba(11,92,255,0.95), rgba(8,71,199,0.82)),
-        linear-gradient(45deg, #0b5cff, #1d4ed8);
+        radial-gradient(circle at 85% 20%, rgba(255,255,255,0.20), transparent 30%),
+        linear-gradient(135deg, #0b5cff 0%, #0847c7 55%, #123b96 100%);
 }
 
-
 .profile-content {
-    padding: 0 24px 25px;
+    padding: 0 24px 27px;
     position: relative;
 }
 
 
-.profile-photo {
-    width: 116px;
-    height: 116px;
+/* =========================================================
+   PROFILE PHOTO
+   ========================================================= */
+
+.profile-photo-frame {
+    width: 124px;
+    height: 124px;
     border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid white;
-    margin-top: -58px;
-    background: #ddd;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    padding: 5px;
+    background: white;
+    margin-top: -62px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.16);
+    position: relative;
 }
 
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+    /*
+       COVER keeps the circular design.
+       profilePosition in driverData controls where
+       the image is cropped.
+    */
+    object-fit: cover;
+
+    background:
+        linear-gradient(135deg, #dbeafe, #f0fdf4);
+
+    object-position: center 25%;
+}
 
 .profile-name {
-    margin-top: 12px;
+    margin-top: 13px;
     font-size: 29px;
     line-height: 1.2;
     color: var(--dark);
     font-weight: 800;
 }
 
+.ridelink-badge {
+    display: inline-block;
+    background: var(--green-soft);
+    color: #166534;
+    padding: 7px 13px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 11px;
+    border: 1px solid #bbf7d0;
+}
 
-
+.driver-reference {
+    margin-top: 9px;
+    font-size: 13px;
+    color: var(--muted);
+    font-weight: 700;
+}
 
 .tagline {
     margin-top: 10px;
@@ -287,7 +238,6 @@ img {
     font-size: 16px;
     max-width: 700px;
 }
-
 
 .location {
     color: var(--muted);
@@ -300,14 +250,12 @@ img {
    ACTION BUTTONS
    ========================================================= */
 
-
 .action-buttons {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 20px;
 }
-
 
 .btn {
     border: none;
@@ -316,34 +264,34 @@ img {
     border-radius: 12px;
     font-weight: 800;
     font-size: 14px;
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
+
     transition: 0.2s ease;
 }
 
-
 .btn:hover {
     transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
-
 
 .btn-whatsapp {
     background: var(--accent);
     color: white;
 }
 
-
 .btn-primary {
     background: var(--primary);
     color: white;
 }
 
-
 .btn-light {
     background: #eef2f7;
     color: var(--dark);
+    border: 1px solid var(--border);
 }
 
 
@@ -351,11 +299,9 @@ img {
    SECTIONS
    ========================================================= */
 
-
 .section {
-    margin-top: 24px;
+    margin-top: 25px;
 }
-
 
 .section-title {
     font-size: 22px;
@@ -363,12 +309,12 @@ img {
     margin-bottom: 13px;
 }
 
-
 .card {
-    background: white;
+    background: rgba(255,255,255,0.96);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     padding: 22px;
+    border: 1px solid rgba(223,230,241,0.8);
 }
 
 
@@ -376,34 +322,37 @@ img {
    SERVICES
    ========================================================= */
 
-
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
 }
 
-
 .service {
     border: 1px solid var(--border);
     border-radius: 14px;
     padding: 16px;
-    background: #fafafa;
+    background:
+        linear-gradient(145deg, #ffffff, #f5f9ff);
+
+    transition: 0.2s ease;
 }
 
+.service:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
 
 .service-icon {
     font-size: 24px;
     margin-bottom: 7px;
 }
 
-
 .service-title {
     font-weight: 800;
     color: var(--dark);
     font-size: 15px;
 }
-
 
 .service-description {
     font-size: 13px;
@@ -416,7 +365,6 @@ img {
    VEHICLE
    ========================================================= */
 
-
 .vehicle-info {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -424,15 +372,14 @@ img {
     align-items: center;
 }
 
-
 .vehicle-main-image {
     width: 100%;
     height: 310px;
     object-fit: cover;
     border-radius: 15px;
-    background: #eee;
+    background: #eef2f7;
+    cursor: pointer;
 }
-
 
 .vehicle-details h3 {
     font-size: 25px;
@@ -440,17 +387,14 @@ img {
     margin-bottom: 5px;
 }
 
-
 .vehicle-type {
     color: var(--muted);
     margin-bottom: 16px;
 }
 
-
 .vehicle-features {
     list-style: none;
 }
-
 
 .vehicle-features li {
     padding: 8px 0;
@@ -463,13 +407,11 @@ img {
    PHOTO GALLERY
    ========================================================= */
 
-
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
-
 
 .gallery img {
     width: 100%;
@@ -480,9 +422,45 @@ img {
     transition: 0.2s;
 }
 
-
 .gallery img:hover {
     transform: scale(1.02);
+}
+
+
+/* =========================================================
+   RIDELINK PROMO
+   ========================================================= */
+
+.ridelink-promo {
+    background:
+        radial-gradient(circle at top right, rgba(255,255,255,0.18), transparent 30%),
+        linear-gradient(135deg, #0b5cff, #0847c7 60%, #123b96);
+
+    color: white;
+    padding: 32px 25px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.ridelink-promo h2 {
+    margin-bottom: 12px;
+}
+
+.ridelink-promo p {
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 20px;
+    opacity: 0.95;
+}
+
+.promo-btn {
+    display: inline-block;
+    background: white;
+    color: #0b5cff;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-weight: 800;
 }
 
 
@@ -490,20 +468,21 @@ img {
    WHY RIDE
    ========================================================= */
 
-
 .why-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
 }
 
-
 .why-item {
-    background: #f8fafc;
+    background:
+        linear-gradient(145deg, #ffffff, #f4f8ff);
+
     padding: 14px;
     border-radius: 12px;
     font-weight: 700;
     color: var(--dark);
+    border: 1px solid var(--border);
 }
 
 
@@ -511,11 +490,11 @@ img {
    QR CODE
    ========================================================= */
 
-
 .qr-card {
     text-align: center;
+    background:
+        linear-gradient(145deg, #ffffff, #f5f9ff);
 }
-
 
 .qr-card p {
     color: var(--muted);
@@ -523,15 +502,14 @@ img {
     margin-bottom: 15px;
 }
 
-
 #qrcode {
     display: inline-block;
     padding: 12px;
     background: white;
     border-radius: 14px;
     border: 1px solid var(--border);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
 }
-
 
 .qr-caption {
     margin-top: 12px;
@@ -541,31 +519,30 @@ img {
 
 
 /* =========================================================
-   CTA
+   FINAL CTA
    ========================================================= */
 
-
 .final-cta {
-    background: linear-gradient(135deg, #0b5cff, #0847c7);
+    background:
+        radial-gradient(circle at 85% 15%, rgba(255,255,255,0.18), transparent 28%),
+        linear-gradient(135deg, #0b5cff, #0847c7);
+
     color: white;
     text-align: center;
     border-radius: var(--radius);
-    padding: 30px 20px;
+    padding: 32px 20px;
     box-shadow: var(--shadow);
 }
-
 
 .final-cta h2 {
     font-size: 25px;
     margin-bottom: 7px;
 }
 
-
 .final-cta p {
     opacity: 0.9;
     margin-bottom: 18px;
 }
-
 
 .final-cta .btn {
     background: white;
@@ -577,38 +554,69 @@ img {
    FOOTER
    ========================================================= */
 
+.footer {
+    background:
+        linear-gradient(135deg, #111827, #172554);
 
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
 
+.footer-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.footer-btn {
+    display: inline-block;
+    background: #0b5cff;
+    color: white;
+    padding: 14px 22px;
+    border-radius: 12px;
+    font-weight: 800;
+}
+
+.footer-small {
+    margin-top: 25px;
+    font-size: 13px;
+    opacity: 0.7;
+}
 
 
 /* =========================================================
    LIGHTBOX
    ========================================================= */
 
-
 .lightbox {
     position: fixed;
     inset: 0;
     background: rgba(0,0,0,0.88);
+
     display: none;
     align-items: center;
     justify-content: center;
+
     z-index: 3000;
     padding: 20px;
 }
 
-
 .lightbox.active {
     display: flex;
 }
-
 
 .lightbox img {
     max-width: 95%;
     max-height: 90vh;
     border-radius: 10px;
 }
-
 
 .lightbox-close {
     position: absolute;
@@ -624,23 +632,27 @@ img {
    TOAST
    ========================================================= */
 
-
 .toast {
     position: fixed;
     bottom: 25px;
     left: 50%;
+
     transform: translateX(-50%) translateY(20px);
+
     background: #111827;
     color: white;
+
     padding: 12px 18px;
     border-radius: 10px;
+
     font-size: 14px;
+
     opacity: 0;
     pointer-events: none;
+
     transition: 0.3s;
     z-index: 5000;
 }
-
 
 .toast.show {
     opacity: 1;
@@ -652,98 +664,81 @@ img {
    MOBILE
    ========================================================= */
 
-
 @media (max-width: 700px) {
-
 
     .header-inner {
         padding: 11px 14px;
     }
 
-
     .logo {
         font-size: 20px;
     }
-
 
     .small-btn {
         padding: 7px 10px;
         font-size: 12px;
     }
 
-
     .container {
         padding: 14px 10px 45px;
     }
-
 
     .hero-cover {
         height: 120px;
     }
 
-
     .profile-content {
         padding: 0 17px 22px;
     }
 
-
-    .profile-photo {
-        width: 100px;
-        height: 100px;
-        margin-top: -50px;
+    .profile-photo-frame {
+        width: 106px;
+        height: 106px;
+        margin-top: -53px;
     }
-
 
     .profile-name {
         font-size: 24px;
     }
-
 
     .action-buttons {
         display: grid;
         grid-template-columns: 1fr;
     }
 
-
     .btn {
         width: 100%;
     }
-
 
     .services-grid {
         grid-template-columns: 1fr;
     }
 
-
     .vehicle-info {
         grid-template-columns: 1fr;
     }
-
 
     .vehicle-main-image {
         height: 250px;
     }
 
-
     .gallery {
         grid-template-columns: 1fr 1fr;
     }
-
 
     .gallery img {
         height: 150px;
     }
 
-
     .why-grid {
         grid-template-columns: 1fr;
     }
-
 
     .card {
         padding: 17px;
     }
 }
+
 </style>
 </head>
 
@@ -755,31 +750,34 @@ img {
      HEADER
      ======================================================= -->
 
-
 <header class="header">
-    <div class="header-inner">
 
+    <div class="header-inner">
 
         <div class="logo-area">
 
-    <a href="https://ridelinkstudio.github.io/ridelink/" class="logo">
-        Ride<span>Link</span>
-    </a>
+            <a
+                href="https://ridelinkstudio.github.io/ridelink/"
+                class="logo"
+            >
+                Ride<span>Link</span>
+            </a>
 
-    <div class="logo-sub">
-        Digital Profiles for Drivers & Small Businesses
-    </div>
+            <div class="logo-sub">
+                Digital Profiles for Drivers & Small Businesses
+            </div>
 
-</div>
+        </div>
 
 
         <div class="header-actions">
 
-
-            <button class="small-btn" onclick="shareProfile()">
+            <button
+                class="small-btn"
+                onclick="shareProfile()"
+            >
                 Share
             </button>
-
 
             <a
                 class="small-btn"
@@ -788,14 +786,11 @@ img {
                 RideLink
             </a>
 
-
         </div>
 
-
     </div>
+
 </header>
-
-
 
 
 <main class="container">
@@ -805,50 +800,62 @@ img {
      DRIVER PROFILE
      ======================================================= -->
 
-
 <section class="profile-card">
-
 
     <div class="hero-cover"></div>
 
-
     <div class="profile-content">
 
+        <div class="profile-photo-frame">
 
-        <img
-            id="profilePhoto"
-            class="profile-photo"
-            src="images/profile.jpg"
-            alt="Driver profile photo"
+            <img
+                id="profilePhoto"
+                class="profile-photo"
+                src="images/profile.jpg"
+                alt="Driver profile photo"
+            >
+
+        </div>
+
+
+        <h1
+            id="driverName"
+            class="profile-name"
         >
-
-
-        <h1 id="driverName" class="profile-name">
             Victor Express Cabs
         </h1>
 
 
         <div class="ridelink-badge">
-    ✓ RideLink Verified Profile
-</div>
-
-<div id="driverReference" class="driver-reference">
-    Driver ID: RL-ABJ-001
-</div>
+            ✓ RideLink Verified Profile
+        </div>
 
 
-        <p id="tagline" class="tagline">
+        <div
+            id="driverReference"
+            class="driver-reference"
+        >
+            Driver ID: RL-ABJ-002
+        </div>
+
+
+        <p
+            id="tagline"
+            class="tagline"
+        >
             Reliable rides around Abuja and beyond.
         </p>
 
 
-        <p id="location" class="location">
+        <p
+            id="location"
+            class="location"
+        >
             📍 Abuja, Nigeria
         </p>
 
 
         <div class="action-buttons">
-
 
             <a
                 id="whatsappButton"
@@ -875,31 +882,24 @@ img {
                 🔗 Copy Link
             </button>
 
-
         </div>
-
 
     </div>
 
-
 </section>
-
-
 
 
 <!-- =======================================================
      ABOUT
      ======================================================= -->
 
-
 <section class="section">
 
-
-    <h2 class="section-title">About the Driver</h2>
-
+    <h2 class="section-title">
+        About the Driver
+    </h2>
 
     <div class="card">
-
 
         <p id="aboutText">
             Victor Express Cabs provides convenient and dependable
@@ -907,50 +907,42 @@ img {
             businesses and visitors.
         </p>
 
-
     </div>
 
-
 </section>
-
-
 
 
 <!-- =======================================================
      SERVICES
      ======================================================= -->
 
-
 <section class="section">
 
+    <h2 class="section-title">
+        Services
+    </h2>
 
-    <h2 class="section-title">Services</h2>
-
-
-    <div id="servicesGrid" class="services-grid"></div>
-
+    <div
+        id="servicesGrid"
+        class="services-grid"
+    ></div>
 
 </section>
-
-
 
 
 <!-- =======================================================
      VEHICLE
      ======================================================= -->
 
-
 <section class="section">
 
-
-    <h2 class="section-title">Vehicle</h2>
-
+    <h2 class="section-title">
+        Vehicle
+    </h2>
 
     <div class="card vehicle-info">
 
-
         <div>
-
 
             <img
                 id="vehicleMainImage"
@@ -960,55 +952,55 @@ img {
                 onclick="openLightbox(this.src)"
             >
 
-
         </div>
 
 
         <div class="vehicle-details">
 
-
             <h3 id="vehicleName">
-                Honda Accord
+                Honda Civic
             </h3>
 
-
-            <p id="vehicleType" class="vehicle-type">
+            <p
+                id="vehicleType"
+                class="vehicle-type"
+            >
                 Comfortable saloon car
             </p>
 
-
-            <ul id="vehicleFeatures" class="vehicle-features"></ul>
-
+            <ul
+                id="vehicleFeatures"
+                class="vehicle-features"
+            ></ul>
 
         </div>
 
-
     </div>
 
-
 </section>
-
-
 
 
 <!-- =======================================================
      GALLERY
      ======================================================= -->
 
-
 <section class="section">
 
+    <h2 class="section-title">
+        Vehicle Gallery
+    </h2>
 
-    <h2 class="section-title">Vehicle Gallery</h2>
-
-
-    <div id="gallery" class="gallery"></div>
-
+    <div
+        id="gallery"
+        class="gallery"
+    ></div>
 
 </section>
 
 
-
+<!-- =======================================================
+     RIDELINK PROMO
+     ======================================================= -->
 
 <section class="section">
 
@@ -1037,82 +1029,66 @@ img {
 </section>
 
 
-
-
 <!-- =======================================================
      WHY RIDE
      ======================================================= -->
 
-
 <section class="section">
 
+    <h2 class="section-title">
+        Why Ride With Us?
+    </h2>
 
-    <h2 class="section-title">Why Ride With Us?</h2>
-
-
-    <div id="whyGrid" class="why-grid"></div>
-
+    <div
+        id="whyGrid"
+        class="why-grid"
+    ></div>
 
 </section>
-
-
 
 
 <!-- =======================================================
      QR CODE
      ======================================================= -->
 
-
 <section class="section">
 
-
     <div class="card qr-card">
-
 
         <h2 class="section-title">
             Scan to Contact
         </h2>
 
-
         <p>
             Scan this QR code to open the driver's WhatsApp contact.
         </p>
 
-
         <div id="qrcode"></div>
-
 
         <p class="qr-caption">
             Point your phone camera at the code.
         </p>
 
-
     </div>
 
-
 </section>
-
-
 
 
 <!-- =======================================================
      FINAL CTA
      ======================================================= -->
 
-
 <section class="section">
-
 
     <div class="final-cta">
 
-
-        <h2>Ready to Ride?</h2>
-
+        <h2>
+            Ready to Ride?
+        </h2>
 
         <p>
             Contact this driver directly to make an enquiry or booking.
         </p>
-
 
         <a
             id="bottomWhatsapp"
@@ -1123,9 +1099,7 @@ img {
             💬 Contact on WhatsApp
         </a>
 
-
     </div>
-
 
 </section>
 
@@ -1133,12 +1107,9 @@ img {
 </main>
 
 
-
-
 <!-- =======================================================
      FOOTER
      ======================================================= -->
-
 
 <footer class="footer">
 
@@ -1166,12 +1137,9 @@ img {
 </footer>
 
 
-
-
 <!-- =======================================================
      LIGHTBOX
      ======================================================= -->
-
 
 <div
     id="lightbox"
@@ -1179,9 +1147,9 @@ img {
     onclick="closeLightbox()"
 >
 
-
-    <span class="lightbox-close">×</span>
-
+    <span class="lightbox-close">
+        ×
+    </span>
 
     <img
         id="lightboxImage"
@@ -1190,190 +1158,174 @@ img {
         onclick="event.stopPropagation()"
     >
 
-
 </div>
 
 
-
-
-<div id="toast" class="toast">
+<div
+    id="toast"
+    class="toast"
+>
     Link copied
 </div>
-
-
 
 
 <!-- =======================================================
      QR CODE LIBRARY
      ======================================================= -->
 
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-
-
 
 
 <script>
 
-
 /* =========================================================
    DRIVER DATA
-   =========================================================
-
-
-   THIS IS THE MAIN PART YOU CHANGE FOR EACH DRIVER.
-
-
-   The page design itself does not need to change.
-
-
    ========================================================= */
-
 
 const driverData = {
 
-
     name: "Victor Express Cabs",
-
 
     referenceId: "RL-ABJ-002",
 
-
     location: "Abuja, Nigeria",
-
 
     tagline:
         "Reliable rides around Abuja and beyond.",
 
-
     about:
         "Victor Express Cabs provides convenient and dependable transportation services for individuals, families, businesses and visitors.",
-
 
     whatsapp:
         "2349035669896",
 
 
+    /*
+       PROFILE PHOTO
+       Change this position if a driver's face
+       needs to move higher/lower inside the circle.
+
+       Examples:
+       "center 20%"
+       "center 30%"
+       "45% 25%"
+    */
+
     profilePhoto:
-        "victor.jpg",
+        "images/victor.jpg",
+
+    profilePosition:
+        "center 25%",
 
 
     vehicle: {
 
-
         name: "Honda Civic",
-
 
         type: "Comfortable saloon car",
 
-
         mainImage:
-            "hero-front.jpg",
-
+            "images/hero-front.jpg",
 
         features: [
-            "Comfortable interior",
-            "Air conditioning",
-            "Suitable for city and longer trips",
-            "Professional private transport"
-        ]
 
+            "Comfortable interior",
+
+            "Air conditioning",
+
+            "Suitable for city and longer trips",
+
+            "Professional private transport"
+
+        ]
 
     },
 
 
     services: [
 
-
         {
             icon: "🚕",
+
             title: "City Rides",
+
             description:
                 "Convenient transportation around Abuja."
         },
 
-
         {
             icon: "✈️",
+
             title: "Airport Transfers",
+
             description:
                 "Pick-up and drop-off arrangements."
         },
 
-
         {
             icon: "🛣️",
+
             title: "Intercity Trips",
+
             description:
                 "Longer-distance journeys by arrangement."
         }
-
 
     ],
 
 
     gallery: [
 
+        "images/front-view.jpg",
 
-        "front-view.jpg",
-        "rear-view.jpg",
-        "interior2.jpg"
+        "images/rear-view.jpg",
 
+        "images/interior2.jpg"
 
     ],
 
 
     whyRide: [
 
-
         "✓ Direct driver contact",
-
 
         "✓ Convenient booking",
 
-
         "✓ Flexible arrangements",
-
 
         "✓ Comfortable transportation",
 
-
         "✓ Personal service",
-
 
         "✓ WhatsApp communication"
 
-
     ]
 
-
 };
-
-
 
 
 /* =========================================================
    INITIALIZE PAGE
    ========================================================= */
 
-
 function initializePage() {
-
 
     document.title =
         driverData.name + " | RideLink";
 
 
-
-
     /* Profile */
 
+    const profilePhoto =
+        document.getElementById("profilePhoto");
 
-    document.getElementById("profilePhoto").src =
+    profilePhoto.src =
         driverData.profilePhoto;
 
+    profilePhoto.style.objectPosition =
+        driverData.profilePosition;
 
-    document.getElementById("profilePhoto").alt =
+    profilePhoto.alt =
         driverData.name;
 
 
@@ -1381,13 +1333,11 @@ function initializePage() {
         driverData.name;
 
 
+    document.getElementById("driverReference").textContent =
+        "Driver ID: " + driverData.referenceId;
 
-document.getElementById("driverReference").textContent =
-    "Driver ID: " + driverData.referenceId;
 
-    
-
-document.getElementById("tagline").textContent =
+    document.getElementById("tagline").textContent =
         driverData.tagline;
 
 
@@ -1399,10 +1349,7 @@ document.getElementById("tagline").textContent =
         driverData.about;
 
 
-
-
     /* WhatsApp */
-
 
     const whatsappLink =
         createWhatsAppLink();
@@ -1416,55 +1363,44 @@ document.getElementById("tagline").textContent =
         whatsappLink;
 
 
-
-
     /* Services */
-
 
     const servicesGrid =
         document.getElementById("servicesGrid");
-
 
     servicesGrid.innerHTML = "";
 
 
     driverData.services.forEach(service => {
 
-
         const item =
             document.createElement("div");
 
-
-        item.className = "service";
-
+        item.className =
+            "service";
 
         item.innerHTML = `
+
             <div class="service-icon">
                 ${service.icon}
             </div>
-
 
             <div class="service-title">
                 ${service.title}
             </div>
 
-
             <div class="service-description">
                 ${service.description}
             </div>
+
         `;
 
-
         servicesGrid.appendChild(item);
-
 
     });
 
 
-
-
     /* Vehicle */
-
 
     document.getElementById("vehicleMainImage").src =
         driverData.vehicle.mainImage;
@@ -1478,121 +1414,91 @@ document.getElementById("tagline").textContent =
         driverData.vehicle.type;
 
 
-
-
     const features =
         document.getElementById("vehicleFeatures");
-
 
     features.innerHTML = "";
 
 
     driverData.vehicle.features.forEach(feature => {
 
-
         const li =
             document.createElement("li");
-
 
         li.textContent =
             "✓ " + feature;
 
-
         features.appendChild(li);
-
 
     });
 
 
-
-
     /* Gallery */
-
 
     const gallery =
         document.getElementById("gallery");
-
 
     gallery.innerHTML = "";
 
 
     driverData.gallery.forEach(photo => {
 
-
         const img =
             document.createElement("img");
 
-
-        img.src = photo;
-
+        img.src =
+            photo;
 
         img.alt =
             driverData.vehicle.name;
 
-
         img.onclick = function() {
+
             openLightbox(photo);
+
         };
 
-
         gallery.appendChild(img);
-
 
     });
 
 
-
-
     /* Why Ride */
-
 
     const whyGrid =
         document.getElementById("whyGrid");
-
 
     whyGrid.innerHTML = "";
 
 
     driverData.whyRide.forEach(reason => {
 
-
         const item =
             document.createElement("div");
 
-
-        item.className = "why-item";
-
+        item.className =
+            "why-item";
 
         item.textContent =
             reason;
 
-
         whyGrid.appendChild(item);
-
 
     });
 
 
-
-
     /* QR */
-
 
     generateQR();
 
-
 }
-
-
 
 
 /* =========================================================
    WHATSAPP
    ========================================================= */
 
-
 function createWhatsAppLink() {
-
 
     const message =
         "Hello " +
@@ -1607,227 +1513,167 @@ function createWhatsAppLink() {
         encodeURIComponent(message)
     );
 
-
 }
-
-
 
 
 /* =========================================================
    QR CODE
    ========================================================= */
 
-
 function generateQR() {
-
 
     const qrContainer =
         document.getElementById("qrcode");
-
 
     qrContainer.innerHTML = "";
 
 
     new QRCode(qrContainer, {
 
+        text:
+            createWhatsAppLink(),
 
-        text: createWhatsAppLink(),
+        width:
+            190,
 
-
-        width: 190,
-
-
-        height: 190,
-
+        height:
+            190,
 
         correctLevel:
             QRCode.CorrectLevel.H
 
-
     });
 
-
 }
-
-
 
 
 /* =========================================================
    SHARE
    ========================================================= */
 
-
 async function shareProfile() {
-
 
     const shareData = {
 
-
         title:
             driverData.name + " | RideLink",
-
 
         text:
             "View the RideLink profile for " +
             driverData.name,
 
-
         url:
             window.location.href
-
 
     };
 
 
-    if (
-        navigator.share
-    ) {
-
+    if (navigator.share) {
 
         try {
 
-
-            await navigator.share(shareData);
-
+            await navigator.share(
+                shareData
+            );
 
         } catch (error) {
 
-
             /* User cancelled share */
-
 
         }
 
-
     } else {
-
 
         copyProfileLink();
 
-
     }
 
-
 }
-
-
 
 
 /* =========================================================
    COPY LINK
    ========================================================= */
 
-
 async function copyProfileLink() {
 
-
     try {
-
 
         await navigator.clipboard.writeText(
             window.location.href
         );
 
-
         showToast(
             "Profile link copied"
         );
 
-
     } catch (error) {
-
 
         showToast(
             "Copy failed — please copy the browser link"
         );
 
-
     }
 
-
 }
-
-
 
 
 /* =========================================================
    TOAST
    ========================================================= */
 
-
 function showToast(message) {
-
 
     const toast =
         document.getElementById("toast");
 
-
     toast.textContent =
         message;
-
 
     toast.classList.add("show");
 
 
     setTimeout(() => {
 
-
         toast.classList.remove("show");
-
 
     }, 2500);
 
-
 }
-
-
 
 
 /* =========================================================
    LIGHTBOX
    ========================================================= */
 
-
 function openLightbox(src) {
-
 
     document.getElementById("lightboxImage").src =
         src;
-
 
     document.getElementById("lightbox").classList.add(
         "active"
     );
 
-
 }
 
 
-
-
 function closeLightbox() {
-
 
     document.getElementById("lightbox").classList.remove(
         "active"
     );
 
-
 }
-
-
 
 
 /* =========================================================
    START
    ========================================================= */
 
-
 initializePage();
 
-
 </script>
-
 
 </body>
 </html>
