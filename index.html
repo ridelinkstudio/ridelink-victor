@@ -1,130 +1,1833 @@
-<!doctype html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#063d2a">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Victor Express Cabs | RideLink</title>
-<meta name="description" content="Victor Express Cabs provides professional transportation services throughout Abuja and surrounding areas. Available 24/7.">
+
+<meta name="description" content="RideLink driver profile for Victor Express Cabs. Book rides and contact the driver directly on WhatsApp.">
+
+<link rel="icon" href="images/logo.png">
+
 <style>
-:root{--green:#063d2a;--bright:#16c965;--lime:#9cff35;--ink:#10251d;--muted:#5c6b65;--light:#f4faf7}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:#fff}
-a{text-decoration:none;color:inherit}.nav{height:70px;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 6%;position:sticky;top:0;z-index:10}.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:27px}.brand span{color:var(--bright)}.tag{font-size:10px;font-weight:500;display:block;letter-spacing:.4px;color:#d9eee5;margin-top:-4px}
-.logo-car{font-size:32px}.menu{font-size:28px}
-.hero{min-height:560px;color:#fff;display:grid;grid-template-columns:42% 58%;background:linear-gradient(90deg,#052b1f 0%,#073b29 42%,rgba(7,59,41,.18) 72%),url('hero-front.jpg') center/cover}
-.hero-copy{padding:80px 7% 70px}.eyebrow{color:var(--lime);font-weight:800;letter-spacing:1px}.hero h1{font-size:clamp(38px,5vw,68px);line-height:.98;margin:15px 0 24px;max-width:600px}.hero p{font-size:18px;line-height:1.55;max-width:430px;color:#eaf7f1}.location{font-weight:700;font-size:19px;margin:22px 0}.cta{display:inline-flex;align-items:center;gap:10px;background:var(--bright);color:#052b1f;padding:16px 24px;border-radius:999px;font-weight:800;font-size:17px;box-shadow:0 8px 25px rgba(0,0,0,.18)}.phone{margin-top:15px;font-weight:700;font-size:18px}
-.section{padding:65px 6%}.section-title{font-size:28px;margin:0 0 35px;color:var(--green)}.section-title:before{content:"";display:inline-block;width:40px;height:4px;background:var(--bright);vertical-align:middle;margin-right:12px}
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.service{background:var(--light);border-radius:18px;padding:25px;text-align:center;border:1px solid #e2eee8}.icon{font-size:30px}.service h3{margin:12px 0 5px}.service p{margin:0;color:var(--muted);font-size:14px}
-.vehicle{background:var(--green);color:#fff}.vehicle .section-title{color:#fff}.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.gallery figure{margin:0;position:relative}.gallery img{width:100%;height:250px;object-fit:cover;border-radius:14px;border:2px solid #8bdcae;display:block}.gallery figcaption{position:absolute;bottom:10px;left:10px;background:rgba(0,45,30,.88);padding:7px 10px;border-radius:7px;font-weight:700;font-size:13px}.vehicle-name{text-align:center;font-size:20px;font-weight:700;margin-top:22px}
-.about{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:center}.about p{font-size:17px;line-height:1.7;color:var(--muted)}.facts{border-left:1px solid #ccd9d3;padding-left:30px}.fact{display:flex;gap:14px;margin:20px 0}.fact strong{display:block}.fact small{color:var(--muted)}
-.bottom{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);width:min(92%,720px);background:var(--bright);color:#052b1f;padding:14px 22px;border-radius:999px;display:flex;justify-content:center;gap:28px;align-items:center;font-weight:800;box-shadow:0 10px 30px rgba(0,0,0,.2);z-index:20}.bottom .divider{width:1px;height:25px;background:#27784f}
-footer{background:#03291d;color:#cfe8dc;padding:35px 6% 100px;text-align:center}footer strong{color:#fff}
-@media(max-width:800px){.hero{grid-template-columns:1fr;min-height:680px;background:linear-gradient(180deg,#052b1feF 0%,#052b1fb8 40%,#052b1f55 100%),url('hero-front.jpg') center/cover}.hero-copy{padding:60px 7%}.hero h1{font-size:45px}.services,.gallery{grid-template-columns:1fr 1fr}.about{grid-template-columns:1fr}.facts{border-left:0;border-top:1px solid #ccd9d3;padding:20px 0 0}.gallery img{height:210px}.nav{padding:0 5%}}
-@media(max-width:520px){.services,.gallery{grid-template-columns:1fr}.hero{min-height:650px}.hero-copy{padding-top:48px}.gallery img{height:230px}.bottom{font-size:14px;gap:12px;padding:13px}.bottom .divider{display:none}.bottom .phone2{display:none}}
+/* =========================================================
+   RIDELINK DRIVER PROFILE TEMPLATE
+   ========================================================= */
+
+
+:root {
+    --primary: #0b5cff;
+    --primary-dark: #0847c7;
+    --accent: #16a34a;
+    --dark: #111827;
+    --text: #374151;
+    --muted: #6b7280;
+    --light: #f5f7fb;
+    --white: #ffffff;
+    --border: #e5e7eb;
+    --shadow: 0 10px 30px rgba(0,0,0,0.08);
+    --radius: 18px;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--light);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+
+.header {
+    background: rgba(255,255,255,0.96);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+
+.header-inner {
+    max-width: 1050px;
+    margin: auto;
+    padding: 13px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logo {
+    font-size: 23px;
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: -0.5px;
+}
+
+
+.logo span {
+    color: var(--dark);
+}
+
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+
+.small-btn {
+    padding: 8px 13px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    border: 1px solid var(--border);
+    background: white;
+    cursor: pointer;
+}
+
+.small-btn:hover {
+    background: #f3f4f6;
+}
+
+
+ .logo-area{
+    display:flex;
+    flex-direction:column;
+}
+
+.logo-sub{
+    font-size:11px;
+    color:var(--muted);
+    margin-top:2px;
+}
+
+.ridelink-badge{
+    display:inline-block;
+    background:#ecfdf5;
+    color:#166534;
+    padding:8px 14px;
+    border-radius:999px;
+    font-size:13px;
+    font-weight:700;
+    margin-top:10px;
+}
+
+.driver-reference{
+    margin-top:10px;
+    font-size:13px;
+    color:var(--muted);
+    font-weight:700;
+}
+
+.ridelink-promo{
+    background:linear-gradient(
+        135deg,
+        #0b5cff,
+        #0847c7
+    );
+    color:white;
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:var(--shadow);
+}
+
+.ridelink-promo h2{
+    margin-bottom:12px;
+}
+
+.ridelink-promo p{
+    max-width:700px;
+    margin:auto;
+    margin-bottom:20px;
+    opacity:0.95;
+}
+
+.promo-btn{
+    display:inline-block;
+    background:white;
+    color:#0b5cff;
+    padding:12px 20px;
+    border-radius:12px;
+    font-weight:800;
+}
+
+.footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+}
+
+.footer-title{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.footer p{
+    max-width:700px;
+    margin:auto;
+    margin-bottom:25px;
+    opacity:0.9;
+}
+
+.footer-btn{
+    display:inline-block;
+    background:#0b5cff;
+    color:white;
+    padding:14px 22px;
+    border-radius:12px;
+    font-weight:800;
+}
+
+.footer-small{
+    margin-top:25px;
+    font-size:13px;
+    opacity:0.7;
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.container {
+    max-width: 1050px;
+    margin: auto;
+    padding: 22px 16px 60px;
+}
+
+
+/* =========================================================
+   PROFILE HERO
+   ========================================================= */
+
+
+.profile-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+
+.hero-cover {
+    height: 145px;
+    background:
+        linear-gradient(135deg, rgba(11,92,255,0.95), rgba(8,71,199,0.82)),
+        linear-gradient(45deg, #0b5cff, #1d4ed8);
+}
+
+
+.profile-content {
+    padding: 0 24px 25px;
+    position: relative;
+}
+
+
+.profile-photo {
+    width: 116px;
+    height: 116px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    margin-top: -58px;
+    background: #ddd;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+
+.profile-name {
+    margin-top: 12px;
+    font-size: 29px;
+    line-height: 1.2;
+    color: var(--dark);
+    font-weight: 800;
+}
+
+
+
+
+.tagline {
+    margin-top: 10px;
+    color: var(--text);
+    font-size: 16px;
+    max-width: 700px;
+}
+
+
+.location {
+    color: var(--muted);
+    font-size: 14px;
+    margin-top: 7px;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+   ========================================================= */
+
+
+.action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+
+.btn {
+    border: none;
+    cursor: pointer;
+    padding: 13px 19px;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: 0.2s ease;
+}
+
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+
+.btn-whatsapp {
+    background: var(--accent);
+    color: white;
+}
+
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+
+.btn-light {
+    background: #eef2f7;
+    color: var(--dark);
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+
+.section {
+    margin-top: 24px;
+}
+
+
+.section-title {
+    font-size: 22px;
+    color: var(--dark);
+    margin-bottom: 13px;
+}
+
+
+.card {
+    background: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 22px;
+}
+
+
+/* =========================================================
+   SERVICES
+   ========================================================= */
+
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+
+.service {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 16px;
+    background: #fafafa;
+}
+
+
+.service-icon {
+    font-size: 24px;
+    margin-bottom: 7px;
+}
+
+
+.service-title {
+    font-weight: 800;
+    color: var(--dark);
+    font-size: 15px;
+}
+
+
+.service-description {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 3px;
+}
+
+
+/* =========================================================
+   VEHICLE
+   ========================================================= */
+
+
+.vehicle-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+
+.vehicle-main-image {
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+    border-radius: 15px;
+    background: #eee;
+}
+
+
+.vehicle-details h3 {
+    font-size: 25px;
+    color: var(--dark);
+    margin-bottom: 5px;
+}
+
+
+.vehicle-type {
+    color: var(--muted);
+    margin-bottom: 16px;
+}
+
+
+.vehicle-features {
+    list-style: none;
+}
+
+
+.vehicle-features li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   PHOTO GALLERY
+   ========================================================= */
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+
+.gallery img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 13px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
+.gallery img:hover {
+    transform: scale(1.02);
+}
+
+
+/* =========================================================
+   WHY RIDE
+   ========================================================= */
+
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+
+.why-item {
+    background: #f8fafc;
+    padding: 14px;
+    border-radius: 12px;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+
+/* =========================================================
+   QR CODE
+   ========================================================= */
+
+
+.qr-card {
+    text-align: center;
+}
+
+
+.qr-card p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+
+#qrcode {
+    display: inline-block;
+    padding: 12px;
+    background: white;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+}
+
+
+.qr-caption {
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+
+.final-cta {
+    background: linear-gradient(135deg, #0b5cff, #0847c7);
+    color: white;
+    text-align: center;
+    border-radius: var(--radius);
+    padding: 30px 20px;
+    box-shadow: var(--shadow);
+}
+
+
+.final-cta h2 {
+    font-size: 25px;
+    margin-bottom: 7px;
+}
+
+
+.final-cta p {
+    opacity: 0.9;
+    margin-bottom: 18px;
+}
+
+
+.final-cta .btn {
+    background: white;
+    color: var(--primary);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+
+
+
+
+/* =========================================================
+   LIGHTBOX
+   ========================================================= */
+
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.88);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 3000;
+    padding: 20px;
+}
+
+
+.lightbox.active {
+    display: flex;
+}
+
+
+.lightbox img {
+    max-width: 95%;
+    max-height: 90vh;
+    border-radius: 10px;
+}
+
+
+.lightbox-close {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   TOAST
+   ========================================================= */
+
+
+.toast {
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: #111827;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-size: 14px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    z-index: 5000;
+}
+
+
+.toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+
+@media (max-width: 700px) {
+
+
+    .header-inner {
+        padding: 11px 14px;
+    }
+
+
+    .logo {
+        font-size: 20px;
+    }
+
+
+    .small-btn {
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+
+
+    .container {
+        padding: 14px 10px 45px;
+    }
+
+
+    .hero-cover {
+        height: 120px;
+    }
+
+
+    .profile-content {
+        padding: 0 17px 22px;
+    }
+
+
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+        margin-top: -50px;
+    }
+
+
+    .profile-name {
+        font-size: 24px;
+    }
+
+
+    .action-buttons {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+
+    .btn {
+        width: 100%;
+    }
+
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .vehicle-info {
+        grid-template-columns: 1fr;
+    }
+
+
+    .vehicle-main-image {
+        height: 250px;
+    }
+
+
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .gallery img {
+        height: 150px;
+    }
+
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .card {
+        padding: 17px;
+    }
+}
 </style>
 </head>
+
+
 <body>
-<header class="nav">
-  <a class="brand" href="#"><span>Ride<span>Link</span><i class="tag">Find. Ride. Go Further.</i></span></a>
- 
+
+
+<!-- =======================================================
+     HEADER
+     ======================================================= -->
+
+
+<header class="header">
+    <div class="header-inner">
+
+
+        <div class="logo-area">
+
+    <a href="https://ridelinkstudio.github.io/ridelink/" class="logo">
+        Ride<span>Link</span>
+    </a>
+
+    <div class="logo-sub">
+        Digital Profiles for Drivers & Small Businesses
+    </div>
+
+</div>
+
+
+        <div class="header-actions">
+
+
+            <button class="small-btn" onclick="shareProfile()">
+                Share
+            </button>
+
+
+            <a
+                class="small-btn"
+                href="https://ridelinkstudio.github.io/ridelink/"
+            >
+                RideLink
+            </a>
+
+
+        </div>
+
+
+    </div>
 </header>
 
-<main>
-<section class="hero">
-  <div class="hero-copy">
-    <div class="eyebrow" style="font-size:22px;">VICTOR EXPRESS CABS</div>
-    <h1>Reliable Transportation Across Abuja</h1>
-    <div class="location">📍 Abuja FCT &amp; Surrounding Areas</div>
-    <p>Professional transportation services with direct booking and personalized service. Available 24/7.</p>
-    <a class="cta" href="https://wa.me/2349035669896?text=Hello%20Victor%2C%20I%27d%20like%20to%20book%20a%20ride." target="_blank" rel="noopener">💬 Book / Contact Victor</a>
-    <div class="phone">WhatsApp / Phone: 09035669896</div>
-  </div>
 
-  <div style="display:flex;align-items:center;justify-content:center;padding:40px 6%;">
-    <div style="text-align:center;">
-      <img src="victor.jpg" alt="Victor of Victor Express Cabs" style="width:210px;height:210px;object-fit:contain;border-radius:50%;border:5px solid #9cff35;background:#063d2a;box-shadow:0 10px 35px rgba(0,0,0,.35);">
-      <div style="margin-top:14px;font-size:24px;font-weight:800;color:#fff;">Victor</div>
-      <div style="font-size:16px;color:#d9eee5;">Your RideLink Driver</div>
+
+
+<main class="container">
+
+
+<!-- =======================================================
+     DRIVER PROFILE
+     ======================================================= -->
+
+
+<section class="profile-card">
+
+
+    <div class="hero-cover"></div>
+
+
+    <div class="profile-content">
+
+
+        <img
+            id="profilePhoto"
+            class="profile-photo"
+            src="images/profile.jpg"
+            alt="Driver profile photo"
+        >
+
+
+        <h1 id="driverName" class="profile-name">
+            Victor Express Cabs
+        </h1>
+
+
+        <div class="ridelink-badge">
+    ✓ RideLink Verified Profile
+</div>
+
+<div id="driverReference" class="driver-reference">
+    Driver ID: RL-ABJ-001
+</div>
+
+
+        <p id="tagline" class="tagline">
+            Reliable rides around Abuja and beyond.
+        </p>
+
+
+        <p id="location" class="location">
+            📍 Abuja, Nigeria
+        </p>
+
+
+        <div class="action-buttons">
+
+
+            <a
+                id="whatsappButton"
+                class="btn btn-whatsapp"
+                href="#"
+                target="_blank"
+            >
+                💬 Book / Contact on WhatsApp
+            </a>
+
+
+            <button
+                class="btn btn-primary"
+                onclick="shareProfile()"
+            >
+                ↗ Share Profile
+            </button>
+
+
+            <button
+                class="btn btn-light"
+                onclick="copyProfileLink()"
+            >
+                🔗 Copy Link
+            </button>
+
+
+        </div>
+
+
     </div>
-  </div>
+
+
 </section>
+
+
+
+
+<!-- =======================================================
+     ABOUT
+     ======================================================= -->
+
 
 <section class="section">
-  <h2 class="section-title">Our Services</h2>
-  <div class="services">
-    <article class="service"><div class="icon">🚗</div><h3>City Rides</h3><p>Convenient transportation around Abuja.</p></article>
-    <article class="service"><div class="icon">✈️</div><h3>Airport Transfers</h3><p>Pickup and drop-off arrangements.</p></article>
-    <article class="service"><div class="icon">📍</div><h3>Pickup &amp; Drop-off</h3><p>Direct transport for planned trips.</p></article>
-    <article class="service"><div class="icon">🎓</div><h3>School Runs</h3><p>Pre-arranged school transportation.</p></article>
-    <article class="service"><div class="icon">📦</div><h3>Package Delivery</h3><p>Local delivery transportation.</p></article>
-    <article class="service"><div class="icon">🛣️</div><h3>Intercity Trips</h3><p>Transportation beyond Abuja.</p></article>
-  </div>
+
+
+    <h2 class="section-title">About the Driver</h2>
+
+
+    <div class="card">
+
+
+        <p id="aboutText">
+            Victor Express Cabs provides convenient and dependable
+            transportation services for individuals, families,
+            businesses and visitors.
+        </p>
+
+
+    </div>
+
+
 </section>
 
-<section class="section vehicle">
-  <h2 class="section-title">Our Vehicle</h2>
-  <div class="gallery">
-    <figure><img src="front-view.jpg" alt="Victor Express Cabs Honda Civic front view"><figcaption>Front View</figcaption></figure>
-    <figure><img src="rear-view.jpg" alt="Victor Express Cabs Honda Civic rear view"><figcaption>Rear View</figcaption></figure>
-    <figure><img src="interior2.jpg" alt="Victor Express Cabs Honda Civic interior"><figcaption>Interior / Dashboard</figcaption></figure>
-  </div>
-  <div class="vehicle-name">Honda Civic 2008</div>
-</section>
+
+
+
+<!-- =======================================================
+     SERVICES
+     ======================================================= -->
+
 
 <section class="section">
-  <div class="about">
-    <div>
-      <h2 class="section-title">About Victor Express Cabs</h2>
-      <p>Victor Express Cabs provides professional transportation services throughout Abuja and surrounding areas. Whether you need a city ride, airport transfer, school run, package delivery or an intercity trip, Victor offers direct booking and personalized service.</p>
-    </div>
-    <div class="facts">
-      <div class="fact"><div>🚗</div><div><small>Vehicle</small><strong>Honda Civic 2008</strong></div></div>
-      <div class="fact"><div>📍</div><div><small>Service Area</small><strong>Abuja FCT &amp; surrounding areas</strong></div></div>
-      <div class="fact"><div>🕐</div><div><small>Availability</small><strong>24 hours / 7 days</strong></div></div>
-    </div>
-  </div>
+
+
+    <h2 class="section-title">Services</h2>
+
+
+    <div id="servicesGrid" class="services-grid"></div>
+
+
 </section>
 
-  <section class="section">
-  <div style="text-align:center;background:#f4faf7;padding:30px;border-radius:18px;">
-    <h2 style="color:#063d2a;margin-top:0;">📱 Scan to Book Victor</h2>
-    <p style="color:#5c6b65;">
-      Scan this QR code to open Victor's RideLink page and contact him directly.
-    </p>
-    <img src="victor-ridelink-qr.png" alt="Victor RideLink QR Code"
-         style="width:220px;max-width:90%;border-radius:12px;">
-    <br><br>
-<a href="https://ridelinkstudio.github.io/ridelink/"
-   target="_blank"
-   rel="noopener"
-   style="display:inline-block;padding:12px 20px;background:#16c965;color:#052b1f;border-radius:999px;font-weight:700;">
-   Want a page like this? Get Your Own RideLink Page
-</a>
-  </div>
-  </section>
-<section class="section" style="padding-top:0">
-  <div style="background:#eef8f3;border-radius:18px;padding:28px;text-align:center">
-    <h2 style="margin:0 0 8px;color:var(--green)">Ready to book?</h2>
-    <p style="color:var(--muted)">Contact Victor directly on WhatsApp for your transportation request.</p>
-    <a class="cta" href="https://wa.me/2349035669896?text=Hello%20Victor%2C%20I%27d%20like%20to%20make%20a%20booking." target="_blank" rel="noopener">💬 WhatsApp Victor</a>
-  </div>
+
+
+
+<!-- =======================================================
+     VEHICLE
+     ======================================================= -->
+
+
+<section class="section">
+
+
+    <h2 class="section-title">Vehicle</h2>
+
+
+    <div class="card vehicle-info">
+
+
+        <div>
+
+
+            <img
+                id="vehicleMainImage"
+                class="vehicle-main-image"
+                src="images/vehicle-1.jpg"
+                alt="Vehicle"
+                onclick="openLightbox(this.src)"
+            >
+
+
+        </div>
+
+
+        <div class="vehicle-details">
+
+
+            <h3 id="vehicleName">
+                Honda Accord
+            </h3>
+
+
+            <p id="vehicleType" class="vehicle-type">
+                Comfortable saloon car
+            </p>
+
+
+            <ul id="vehicleFeatures" class="vehicle-features"></ul>
+
+
+        </div>
+
+
+    </div>
+
+
 </section>
+
+
+
+
+<!-- =======================================================
+     GALLERY
+     ======================================================= -->
+
+
+<section class="section">
+
+
+    <h2 class="section-title">Vehicle Gallery</h2>
+
+
+    <div id="gallery" class="gallery"></div>
+
+
+</section>
+
+
+
+
+<section class="section">
+
+    <div class="ridelink-promo">
+
+        <h2>
+            Need Your Own RideLink Profile?
+        </h2>
+
+        <p>
+            Drivers and small businesses can get a
+            professional online profile with photos,
+            WhatsApp booking, QR code and direct
+            customer contact.
+        </p>
+
+        <a
+            href="https://ridelinkstudio.github.io/ridelink/"
+            class="promo-btn"
+        >
+            Learn More
+        </a>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- =======================================================
+     WHY RIDE
+     ======================================================= -->
+
+
+<section class="section">
+
+
+    <h2 class="section-title">Why Ride With Us?</h2>
+
+
+    <div id="whyGrid" class="why-grid"></div>
+
+
+</section>
+
+
+
+
+<!-- =======================================================
+     QR CODE
+     ======================================================= -->
+
+
+<section class="section">
+
+
+    <div class="card qr-card">
+
+
+        <h2 class="section-title">
+            Scan to Contact
+        </h2>
+
+
+        <p>
+            Scan this QR code to open the driver's WhatsApp contact.
+        </p>
+
+
+        <div id="qrcode"></div>
+
+
+        <p class="qr-caption">
+            Point your phone camera at the code.
+        </p>
+
+
+    </div>
+
+
+</section>
+
+
+
+
+<!-- =======================================================
+     FINAL CTA
+     ======================================================= -->
+
+
+<section class="section">
+
+
+    <div class="final-cta">
+
+
+        <h2>Ready to Ride?</h2>
+
+
+        <p>
+            Contact this driver directly to make an enquiry or booking.
+        </p>
+
+
+        <a
+            id="bottomWhatsapp"
+            class="btn"
+            href="#"
+            target="_blank"
+        >
+            💬 Contact on WhatsApp
+        </a>
+
+
+    </div>
+
+
+</section>
+
+
 </main>
 
-<footer>
-  <strong>Victor Express Cabs</strong><br>
-  Powered by RideLink · Find. Ride. Go Further.
-  <br><br>
-  <a href="https://ridelinkstudio.github.io/ridelink/"
-     target="_blank"
-     rel="noopener"
-     style="display:inline-block;padding:10px 18px;background:#16c965;color:#052b1f;border-radius:999px;font-weight:700;">
-     🚗 Get Your Own RideLink Page
-  </a>
+
+
+
+<!-- =======================================================
+     FOOTER
+     ======================================================= -->
+
+
+<footer class="footer">
+
+    <h3 class="footer-title">
+        RideLink
+    </h3>
+
+    <p>
+        Helping independent drivers and small
+        businesses build trust and attract
+        customers online.
+    </p>
+
+    <a
+        href="https://ridelinkstudio.github.io/ridelink/"
+        class="footer-btn"
+    >
+        Get Your Own RideLink Profile
+    </a>
+
+    <div class="footer-small">
+        © RideLink
+    </div>
+
 </footer>
 
-<a class="bottom" href="https://wa.me/2349035669896?text=Hello%20Victor%2C%20I%27d%20like%20to%20book%20a%20ride." target="_blank" rel="noopener">
-  <span>💬 Book / Contact Victor</span><span class="divider"></span><span class="phone2">09035669896</span>
-</a>
+
+
+
+<!-- =======================================================
+     LIGHTBOX
+     ======================================================= -->
+
+
+<div
+    id="lightbox"
+    class="lightbox"
+    onclick="closeLightbox()"
+>
+
+
+    <span class="lightbox-close">×</span>
+
+
+    <img
+        id="lightboxImage"
+        src=""
+        alt="Expanded vehicle image"
+        onclick="event.stopPropagation()"
+    >
+
+
+</div>
+
+
+
+
+<div id="toast" class="toast">
+    Link copied
+</div>
+
+
+
+
+<!-- =======================================================
+     QR CODE LIBRARY
+     ======================================================= -->
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+
+
+
+<script>
+
+
+/* =========================================================
+   DRIVER DATA
+   =========================================================
+
+
+   THIS IS THE MAIN PART YOU CHANGE FOR EACH DRIVER.
+
+
+   The page design itself does not need to change.
+
+
+   ========================================================= */
+
+
+const driverData = {
+
+
+    name: "Victor Express Cabs",
+
+
+    referenceId: "RL-ABJ-002",
+
+
+    location: "Abuja, Nigeria",
+
+
+    tagline:
+        "Reliable rides around Abuja and beyond.",
+
+
+    about:
+        "Victor Express Cabs provides convenient and dependable transportation services for individuals, families, businesses and visitors.",
+
+
+    whatsapp:
+        "2349035669896",
+
+
+    profilePhoto:
+        "images/victor.jpg",
+
+
+    vehicle: {
+
+
+        name: "Honda Civic",
+
+
+        type: "Comfortable saloon car",
+
+
+        mainImage:
+            "images/hero-front.jpg",
+
+
+        features: [
+            "Comfortable interior",
+            "Air conditioning",
+            "Suitable for city and longer trips",
+            "Professional private transport"
+        ]
+
+
+    },
+
+
+    services: [
+
+
+        {
+            icon: "🚕",
+            title: "City Rides",
+            description:
+                "Convenient transportation around Abuja."
+        },
+
+
+        {
+            icon: "✈️",
+            title: "Airport Transfers",
+            description:
+                "Pick-up and drop-off arrangements."
+        },
+
+
+        {
+            icon: "🛣️",
+            title: "Intercity Trips",
+            description:
+                "Longer-distance journeys by arrangement."
+        }
+
+
+    ],
+
+
+    gallery: [
+
+
+        "images/front-view.jpg",
+        "images/rear-view.jpg",
+        "images/interior2.jpg"
+
+
+    ],
+
+
+    whyRide: [
+
+
+        "✓ Direct driver contact",
+
+
+        "✓ Convenient booking",
+
+
+        "✓ Flexible arrangements",
+
+
+        "✓ Comfortable transportation",
+
+
+        "✓ Personal service",
+
+
+        "✓ WhatsApp communication"
+
+
+    ]
+
+
+};
+
+
+
+
+/* =========================================================
+   INITIALIZE PAGE
+   ========================================================= */
+
+
+function initializePage() {
+
+
+    document.title =
+        driverData.name + " | RideLink";
+
+
+
+
+    /* Profile */
+
+
+    document.getElementById("profilePhoto").src =
+        driverData.profilePhoto;
+
+
+    document.getElementById("profilePhoto").alt =
+        driverData.name;
+
+
+    document.getElementById("driverName").textContent =
+        driverData.name;
+
+
+
+document.getElementById("driverReference").textContent =
+    "Driver ID: " + driverData.referenceId;
+
+    
+
+document.getElementById("tagline").textContent =
+        driverData.tagline;
+
+
+    document.getElementById("location").textContent =
+        "📍 " + driverData.location;
+
+
+    document.getElementById("aboutText").textContent =
+        driverData.about;
+
+
+
+
+    /* WhatsApp */
+
+
+    const whatsappLink =
+        createWhatsAppLink();
+
+
+    document.getElementById("whatsappButton").href =
+        whatsappLink;
+
+
+    document.getElementById("bottomWhatsapp").href =
+        whatsappLink;
+
+
+
+
+    /* Services */
+
+
+    const servicesGrid =
+        document.getElementById("servicesGrid");
+
+
+    servicesGrid.innerHTML = "";
+
+
+    driverData.services.forEach(service => {
+
+
+        const item =
+            document.createElement("div");
+
+
+        item.className = "service";
+
+
+        item.innerHTML = `
+            <div class="service-icon">
+                ${service.icon}
+            </div>
+
+
+            <div class="service-title">
+                ${service.title}
+            </div>
+
+
+            <div class="service-description">
+                ${service.description}
+            </div>
+        `;
+
+
+        servicesGrid.appendChild(item);
+
+
+    });
+
+
+
+
+    /* Vehicle */
+
+
+    document.getElementById("vehicleMainImage").src =
+        driverData.vehicle.mainImage;
+
+
+    document.getElementById("vehicleName").textContent =
+        driverData.vehicle.name;
+
+
+    document.getElementById("vehicleType").textContent =
+        driverData.vehicle.type;
+
+
+
+
+    const features =
+        document.getElementById("vehicleFeatures");
+
+
+    features.innerHTML = "";
+
+
+    driverData.vehicle.features.forEach(feature => {
+
+
+        const li =
+            document.createElement("li");
+
+
+        li.textContent =
+            "✓ " + feature;
+
+
+        features.appendChild(li);
+
+
+    });
+
+
+
+
+    /* Gallery */
+
+
+    const gallery =
+        document.getElementById("gallery");
+
+
+    gallery.innerHTML = "";
+
+
+    driverData.gallery.forEach(photo => {
+
+
+        const img =
+            document.createElement("img");
+
+
+        img.src = photo;
+
+
+        img.alt =
+            driverData.vehicle.name;
+
+
+        img.onclick = function() {
+            openLightbox(photo);
+        };
+
+
+        gallery.appendChild(img);
+
+
+    });
+
+
+
+
+    /* Why Ride */
+
+
+    const whyGrid =
+        document.getElementById("whyGrid");
+
+
+    whyGrid.innerHTML = "";
+
+
+    driverData.whyRide.forEach(reason => {
+
+
+        const item =
+            document.createElement("div");
+
+
+        item.className = "why-item";
+
+
+        item.textContent =
+            reason;
+
+
+        whyGrid.appendChild(item);
+
+
+    });
+
+
+
+
+    /* QR */
+
+
+    generateQR();
+
+
+}
+
+
+
+
+/* =========================================================
+   WHATSAPP
+   ========================================================= */
+
+
+function createWhatsAppLink() {
+
+
+    const message =
+        "Hello " +
+        driverData.name +
+        ", I found your RideLink profile and would like to make an enquiry.";
+
+
+    return (
+        "https://wa.me/" +
+        driverData.whatsapp +
+        "?text=" +
+        encodeURIComponent(message)
+    );
+
+
+}
+
+
+
+
+/* =========================================================
+   QR CODE
+   ========================================================= */
+
+
+function generateQR() {
+
+
+    const qrContainer =
+        document.getElementById("qrcode");
+
+
+    qrContainer.innerHTML = "";
+
+
+    new QRCode(qrContainer, {
+
+
+        text: createWhatsAppLink(),
+
+
+        width: 190,
+
+
+        height: 190,
+
+
+        correctLevel:
+            QRCode.CorrectLevel.H
+
+
+    });
+
+
+}
+
+
+
+
+/* =========================================================
+   SHARE
+   ========================================================= */
+
+
+async function shareProfile() {
+
+
+    const shareData = {
+
+
+        title:
+            driverData.name + " | RideLink",
+
+
+        text:
+            "View the RideLink profile for " +
+            driverData.name,
+
+
+        url:
+            window.location.href
+
+
+    };
+
+
+    if (
+        navigator.share
+    ) {
+
+
+        try {
+
+
+            await navigator.share(shareData);
+
+
+        } catch (error) {
+
+
+            /* User cancelled share */
+
+
+        }
+
+
+    } else {
+
+
+        copyProfileLink();
+
+
+    }
+
+
+}
+
+
+
+
+/* =========================================================
+   COPY LINK
+   ========================================================= */
+
+
+async function copyProfileLink() {
+
+
+    try {
+
+
+        await navigator.clipboard.writeText(
+            window.location.href
+        );
+
+
+        showToast(
+            "Profile link copied"
+        );
+
+
+    } catch (error) {
+
+
+        showToast(
+            "Copy failed — please copy the browser link"
+        );
+
+
+    }
+
+
+}
+
+
+
+
+/* =========================================================
+   TOAST
+   ========================================================= */
+
+
+function showToast(message) {
+
+
+    const toast =
+        document.getElementById("toast");
+
+
+    toast.textContent =
+        message;
+
+
+    toast.classList.add("show");
+
+
+    setTimeout(() => {
+
+
+        toast.classList.remove("show");
+
+
+    }, 2500);
+
+
+}
+
+
+
+
+/* =========================================================
+   LIGHTBOX
+   ========================================================= */
+
+
+function openLightbox(src) {
+
+
+    document.getElementById("lightboxImage").src =
+        src;
+
+
+    document.getElementById("lightbox").classList.add(
+        "active"
+    );
+
+
+}
+
+
+
+
+function closeLightbox() {
+
+
+    document.getElementById("lightbox").classList.remove(
+        "active"
+    );
+
+
+}
+
+
+
+
+/* =========================================================
+   START
+   ========================================================= */
+
+
+initializePage();
+
+
+</script>
+
+
 </body>
 </html>
